@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Main menu.gd" type="Script" id=1]
+[ext_resource path="res://Font.tres" type="DynamicFont" id=2]
+
+[node name="Main menu" type="Control"]
+script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 1026.0
+margin_bottom = 113.0
+custom_fonts/font = ExtResource( 2 )
+text = "Constellations"
+align = 1
+
+[node name="Label" type="Label" parent="Label"]
+margin_left = 681.07
+margin_top = 144.744
+margin_right = 829.07
+margin_bottom = 158.744
+rect_scale = Vector2( 2, 2 )
+text = "A Game by Gorglomux "
+
+[node name="Label2" type="Label" parent="."]
+margin_top = 578.188
+margin_right = 261.0
+margin_bottom = 592.188
+rect_scale = Vector2( 1.5, 1.5 )
+text = "Font \"Constellations\" by Shara Weber"
+
+[node name="Button" type="TextureButton" parent="."]
+margin_left = 344.776
+margin_top = 237.646
+margin_right = 561.776
+margin_bottom = 352.646
+
+[node name="Label" type="Label" parent="Button"]
+margin_right = 211.0
+margin_bottom = 113.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.239216, 0.494118, 0.764706, 1 )
+text = "Play"
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
